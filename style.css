@@ -1,0 +1,17 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1em;
+}
+
+p {
+    color: red;
+}
+
+#valor {
+    color: green;
+}
+
+.classe {
+    color: blue;
+}
+
