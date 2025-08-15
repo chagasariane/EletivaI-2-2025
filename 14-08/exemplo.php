@@ -10,7 +10,7 @@
         $dia = date("d");
 
         echo "<p>" . $dia . "</p>"; // o "." concatena, igual o + em C#
-        echo "<p> $dia </p>"
+        echo "<p> $dia </p>" //exbir variável com $variavel
     ?>
     <h1>Hoje é dia <?= $dia ?> de Agosto de 2025</h1>
     
