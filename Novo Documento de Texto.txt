@@ -9,5 +9,8 @@ http://localhost:8080/14-08/exemplo.php
 https://vanessaborges2.github.io/Gerador-Formulario/
 
 composer
+identical sublime text monokai theme - extensão para deixar palavras coloridas
 
+post e get para method
+action, opcional, usamos quando queremos mandar a resposta para outra página
 
