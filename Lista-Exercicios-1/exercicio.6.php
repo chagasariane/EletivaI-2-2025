@@ -24,14 +24,7 @@
 </form>
 
 <?php
-    if($_SERVER['REQUEST_METHOD'] == 'POST'){
-        $nota1 = $_POST['nota1'];
-        $nota2 = $_POST['nota2'];
-        $nota3 = $_POST['nota3'];
-        $media = ($nota1+$nota2+$nota3)/3;
-        echo "<p>Média: $media</p>";
-        echo "Média: ".number_format($media, 2, ',', '.');
-    }
+    
 ?>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
