@@ -21,12 +21,13 @@
             </div>
 <button type="submit" class="btn btn-primary">Enviar</button>
 </form>
-(20 °F − 32) × 5/9
+
 <?php
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
       $temperatura = $_POST['temperatura'];
-      $f = ($temperatura * 1.8) + 32;
-      echo "<p> $temperatura °F = $f °C</p>";
+      $c = ($temperatura - 32) * (5/9);
+      echo "<p> $temperatura °F = $c °C</p>";
+      echo "<p> $temperatura °F = ".number_format($c, 2, ',', '.') . " °C</p>";
     }
 ?>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
