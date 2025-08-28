@@ -21,7 +21,7 @@
 </form>
 
 <?php
-    if($_SERVER['REQUEST_METHOD'] == 'POST'){ 
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){ //para saber o tipo de método que está chamando a página
         $valor1 = $_POST['valor1'];
         $valor2 = $_POST['valor2'];
         $soma = $valor1 + $valor2;
