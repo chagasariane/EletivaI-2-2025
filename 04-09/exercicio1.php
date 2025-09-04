@@ -36,7 +36,7 @@
 </form>
 
 <?php
-    if($_SERVER['REQUEST_METHOD' == 'POST']){
+    if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $valor1 = $_POST['valor1'];
         $valor2 = $_POST['valor2'];
         $valor3 = $_POST['valor3'];
@@ -73,7 +73,7 @@
             $posicao = 7;
         }
 
-        echo "<p> O menor valor informado é $menor e está na posição $posicao";
+        echo "<p> O menor valor informado é $menor e está na posição $posicao.</p>";
     }
 ?>
 
