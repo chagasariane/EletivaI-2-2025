@@ -50,10 +50,4 @@
     }
     $soma = somarValores(1,2,3,4,5,6);
     echo "<p>A soma dos valores é: $soma</p>";
-
-
-
-
-
-
 ?>

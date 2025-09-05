@@ -34,7 +34,30 @@
             case 4:
                 echo "<p>Abril</p>";
                 break;
-            //adicionar outros meses
+            case 5:
+                echo "<p>Maio</p>";
+                break;
+            case 6:
+                echo "<p>Junho</p>";
+                break;
+            case 7:
+                echo "<p>Julho</p>";
+                break;
+            case 8:
+                echo "<p>Agosto</p>";
+                break;
+            case 9:
+                echo "<p>Setembro</p>";
+                break;
+            case 10:
+                echo "<p>Outubro</p>";
+                break;
+            case 11:
+                echo "<p>Novembro</p>";
+                break;
+            case 12:
+                echo "<p>Dezembro</p>";
+                break;
             default:
                 echo "<p>Número não possui mês correspondente!</p>";
         }

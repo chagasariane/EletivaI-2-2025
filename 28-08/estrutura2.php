@@ -9,7 +9,7 @@
     } elseif($valor < 10){
         echo "Valor menor que 10";
     } else
-        echo "Igual a 10!";
+        echo "Igual a 10!"; // quando tiver mais de uma linha depois de else, devo adicionar {}
 
     include("rodape.php");
 
