@@ -4,7 +4,7 @@
     echo "<p>Primeiro valor do vetor: ".$valor[0]."</p>";
     //$v = $_POST['name'];
 
-    $vator = [1,2,3,4,5];
+    $vetor = [1, 2, 3, 4, 5];
     //Função para exibir valores do vetor
     var_dump($vetor);
     echo "<br/>";
@@ -17,12 +17,11 @@
     $vetor[$v] = "Ariane";
     print_r($vetor);
 
-    $valor = [
+    $valores = [
         'nome' => "Ariane",
         'sobrenome' => "Chagas",
         'idade' => "27"
     ];
-
     foreach($valores as $c => $v){
         echo "<p>Posição: $c = Valor: $v</p>";
     }
