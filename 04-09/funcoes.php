@@ -1,5 +1,6 @@
 <?php
     $nome = "Ariane";
+
     echo "<p>Todas em maiúsculo: ".strtoupper($nome)."</p>";
     echo "<p>Todas em minúscula: ".strtolower($nome)."</p>";
     echo "<p>Qtd. de caracteres: ".strlen($nome)."</p>";
@@ -27,18 +28,18 @@
     $valor = rand(1, 100);
     echo "<p>Valor aleatório: $valor</p>";
     echo "<p>Raiz quadrada de 16: ".sqrt(16)."</p>";
-    $valor = 13.5;
+    $valor = 13500;
     echo "<p>Valor formatado: R$".number_format($valor, 2, ",", ".")."</p>"; //duas casas decimais, separador e separador de milha
 
     function exibirSaudacao(){
         echo "<p>Olá mundo!</p>";
     }
-    exibirSaudacao();
+    exibirSaudacao(); // chamar a função
 
     function exibirSaudacaoComNome($nome){
         echo "<p>Seja bem-vindo(a), $nome!</p>";
     }
-    exibirSaudacaoComNome("Ariane");
+    exibirSaudacaoComNome("Ariane"); 
 
     function menorValor($valor1,$valor2){
         return min($valor1, $valor2);
