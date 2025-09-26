@@ -9,7 +9,7 @@
 <body>
   <div class="container mt-5">
     <h2 class="mb-4">Cadastro de Usuário</h2>
-    <form action="/cadastro" method="POST">
+    <form method="POST">
       <div class="mb-3">
         <label for="nomeCadastro" class="form-label">Nome</label>
         <input type="text" class="form-control" id="nomeCadastro" name="nome" placeholder="Digite seu nome completo" required />
@@ -29,5 +29,24 @@
       <a href="index.php">Faça login aqui</a>
     </p>
   </div>
+  <?php
+    if($_SERVER['REQUEST_METHOD'] == "POST"){
+        require("conexao.php");
+        $nome = $_POST['nome'];
+        $email = $_POST['email'];
+        $senha = $_POST['senha'];
+        $senha = password_hash($senha, PASSWORD_BCRYPT); // criptografia da senha
+        try{
+            $stmt = $pdo->prepare("INSERT INTO usuario (nome, email, senha) VALUES (?, ?, ?)"); // prepara a declaração do sql que vou usar para inserir os dados no banco de dados
+            if($stmt->execute([$nome, $email, $senha])){
+                header("location: index.php?cadastro=true");
+            } else {
+                header("location: index.php?cadastro=false");
+            }
+        } catch(Exception $e){
+            echo "Erro ao executar o comando SQL: ".$e->getMessage();
+        }
+    }
+  ?>
 </body>
 </html>

@@ -8,6 +8,16 @@
 </head>
 <body>
   <div class="container mt-5">
+    <?php
+        if(isset($_GET['cadastro'])){
+            $cadastro = $_GET['cadastro'];
+            if($cadastro){
+                echo "<p class='text-success'>Cadastro realizado com sucesso!</p>";
+            } else {
+                echo "<p class='text-danger'>Erro ao  realizar o cadastro!</p>";
+            }
+        }
+    ?>
     <h2 class="mb-4">Acesso ao Sistema</h2>
     <form action="/login" method="POST">
       <div class="mb-3">
