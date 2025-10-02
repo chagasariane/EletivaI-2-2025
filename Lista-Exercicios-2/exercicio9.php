@@ -18,7 +18,6 @@
         $fatorial = $numero;
         for($i=$numero-1;$i>1;$i--){
             $fatorial = $fatorial * $i;
-            //$fatorial *= $i;
         }
         echo "<p>O fatorial de $numero é: $fatorial<p>";
     }
