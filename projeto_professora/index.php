@@ -17,9 +17,14 @@
                 echo "<p class='text-danger'>Erro ao  realizar o cadastro!</p>";
             }
         }
+        if($_SERVER['REQUEST_METHOD'] == 'POST'){
+          $email = $_POST['email'];
+          $senha = $_POST['senha'];
+          require('conexao.php');
+        }
     ?>
     <h2 class="mb-4">Acesso ao Sistema</h2>
-    <form action="/login" method="POST">
+    <form action="index.php" method="POST">
       <div class="mb-3">
         <label for="emailLogin" class="form-label">Email</label>
         <input type="email" class="form-control" id="emailLogin" name="email" placeholder="Digite seu email" required />
