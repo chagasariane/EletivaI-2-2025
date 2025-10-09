@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    if(!isset($_SESSION['acesso']))
+        header('location: index.php');
+?>
+
 <!doctype html>
 <html lang="pt-BR">
 <head>
@@ -34,6 +40,8 @@
   </div>
 </nav>
 <div class="container py-3">
+    <h1>Seja bem-vindo <?= $_SESSION['nome']?></h1>
+    <h6><a href='logout.php'></a>Sair</h6>
 </div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
 </body>
