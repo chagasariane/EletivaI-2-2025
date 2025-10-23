@@ -13,6 +13,16 @@
     } else if(isset($_GET['cadastro']) && !$_GET['cadastro']){
         echo '<p class="text-danger">Erro ao cadastrar!</p>';
     }
+    if(isset($_GET['editar']) && $_GET['editar']){
+      echo '<p class="text-sucess">Registro realizado!</p>';
+    } else if(isset($_GET['editar']) && !$_GET['editar']){
+        echo '<p class="text-danger">Erro ao editar!</p>';
+    }
+    if(isset($_GET['excluir']) && $_GET['excluir']){
+      echo '<p class="text-sucess">Registro excluído!</p>';
+    } else if(isset($_GET['excluir']) && !$_GET['excluir']){
+        echo '<p class="text-danger">Erro ao excluir!</p>';
+    }
 ?>
 
 <h2>Categorias</h2>
