@@ -13,9 +13,9 @@
     if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $nome = $_POST['nome'];
         $id = $_POST['id'];
+        $categoria = $_POST['categoria'];
         try{
-            $stmt = 
-                $pdo->prepare("UPDATE categoria set nome = ? WHERE id = ?");
+            $stmt = $pdo->prepare("UPDATE categoria set nome = ? WHERE id = ?");
             if($stmt->execute([$nome, $id])){
                 header('location: categorias.php?editar=true');
             } else
