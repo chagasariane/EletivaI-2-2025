@@ -1,0 +1,15 @@
+Sistema de Gerenciamento de Adoção de Animais
+
+Escopo: Plataforma para gerenciamento de adoção de pets resgatados por ONGs.
+
+o RF1: CRUD para cadastro de animais.
+o RF2: CRUD para cadastro de adotantes.
+o RF3: CRUD para cadastro de ONGs responsáveis.
+o RF4: Registrar adoções, associando animais e adotantes, com aprovação das ONGs (registre a data da adoção).
+
+crie um script SQL para gerar um banco chamado projetophp com as seguintes tabelas: animal (com as colunas: ani_id, especie, raça, nome, fase_vida), 
+adotante (com as colunas: adot_id, adot_nome, adot_telefone, adot_cpf), ong (com as colunas: ong_id, ong_nome, ong_cnpj), 
+usuario (com as colunas: usu_id, usu_nome, usu_email, usu_senha)
+
+gere dois códigos em php para criar uma tela de cadastro de usuário e um index, usando bootstrap para estilizar. Faça no estilo acolhedor, pois o sistema 
+será de gerenciamento de adoção de animais resgatados
