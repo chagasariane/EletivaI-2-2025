@@ -11,31 +11,37 @@
     }
 
     if (isset($_GET['cadastro']) && $_GET['cadastro']){
-        echo "<p class='text-success'>Cadastro realizado!</p>";
+        echo "<p class='text-success no-print'>Cadastro realizado!</p>";
     } else if (isset($_GET['cadastro']) && !$_GET['cadastro']){
-        echo "<p class='text-danger'>Erro ao cadastrar!</p>";
+        echo "<p class='text-danger no-print'>Erro ao cadastrar!</p>";
     }
     if (isset($_GET['editar']) && $_GET['editar']){
-        echo "<p class='text-success'>Registro editado!</p>";
+        echo "<p class='text-success no-print'>Registro editado!</p>";
     } else if (isset($_GET['editar']) && !$_GET['editar']){
-        echo "<p class='text-danger'>Erro ao editar!</p>";
+        echo "<p class='text-danger no-print'>Erro ao editar!</p>";
     }
     if (isset($_GET['excluir']) && $_GET['excluir']){
-        echo "<p class='text-success'>Registro excluído!</p>";
+        echo "<p class='text-success no-print'>Registro excluído!</p>";
     } else if (isset($_GET['cadastro']) && !$_GET['cadastro']){
-        echo "<p class='text-danger'>Erro ao excluir!</p>";
+        echo "<p class='text-danger no-print'>Erro ao excluir!</p>";
     }
 ?>
 
 <h2>Produtos</h2>
-<a href="novo_produto.php" class="btn btn-success mb-3">Novo Registro</a>
+<a href="novo_produto.php" class="btn btn-success mb-3 no-print">Novo Registro</a>
 <table class="table table-hover table-striped">
     <thead>
+        <tr>
+            <th colspan="3">Dados dos Produtos</th>
+            <th class="no-print">
+                <button class="btn btn-secondary" onclick="window.print()">Imprimir</button>
+            </th>
+        </tr>
         <tr>
             <th>ID</th>
             <th>Descrição</th>
             <th>Categoria</th>
-            <th>Ações</th>
+            <th class="no-print">Ações</th>
         </tr>
     </thead>
     <tbody>
@@ -46,7 +52,7 @@
             <td><?= $d['id'] ?></td>
             <td><?= $d['descricao'] ?></td>
             <td><?= $d['nome'] ?></td>
-            <td class="d-flex gap-2">
+            <td class="d-flex gap-2 no-print">
                 <a href="editar_produto.php?id=<?= $d['id'] ?>" class="btn btn-sm btn-warning">Editar</a>
                 <a href="consultar_produto.php?id=<?= $d['id'] ?>" class="btn btn-sm btn-info">Consultar</a>
             </td>
