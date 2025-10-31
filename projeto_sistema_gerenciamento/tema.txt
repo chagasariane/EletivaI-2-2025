@@ -14,3 +14,9 @@ usuario (com as colunas: usu_id, usu_nome, usu_email, usu_senha)
 gere dois códigos em php para criar uma tela de cadastro de usuário e um index para acessar o cadastro, usando bootstrap para estilizar. Faça no estilo acolhedor, pois o sistema 
 será de gerenciamento de adoção de animais resgatados
 
+preciso de três CRUD:
+cadastrar animais - consultar animais - editar animais - excluir animais cadastrados
+cadastrar adotantes - consultar adotantes - editar adotantes - excluir adotantes cadastrados
+cadastrar ONGs - consultar ONGs - editar ONGs - excluir ONGs cadastrados
+
+página pricipal 
