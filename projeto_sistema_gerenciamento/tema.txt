@@ -19,4 +19,8 @@ cadastrar animais - consultar animais - editar animais - excluir animais cadastr
 cadastrar adotantes - consultar adotantes - editar adotantes - excluir adotantes cadastrados
 cadastrar ONGs - consultar ONGs - editar ONGs - excluir ONGs cadastrados
 
-página pricipal 
+página pricipal - gráfico com informações do banco
+
+preciso que você me oriente a criar um sistema simples em php
+eu tenho um exemplo no qual usaremos como base
+o meu novo sistema será um gerenciamento de adoção de animais resgatados
