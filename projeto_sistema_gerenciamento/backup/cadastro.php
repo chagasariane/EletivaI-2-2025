@@ -1,35 +1,15 @@
 <?php
 // cadastro.php
-require 'conexao.php'; // usa o $pdo
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nome  = trim($_POST["nome"] ?? '');
-    $email = trim($_POST["email"] ?? '');
-    $senha = $_POST["senha"] ?? '';
+    $nome = $_POST["nome"];
+    $email = $_POST["email"];
+    $senha = $_POST["senha"];
 
-    // Validação simples
-    if ($nome === '' || $email === '' || $senha === '') {
-        echo "<script>alert('Preencha todos os campos.'); history.back();</script>";
-        exit;
-    }
+    // Aqui você pode adicionar a lógica para salvar no banco de dados.
+    // Exemplo: inserção via PDO (não incluído para simplificar).
 
-    // Criptografar senha
-    $hash = password_hash($senha, PASSWORD_DEFAULT);
-
-    // Inserir no banco (tabela projetophp.usuario)
-    $sql = "INSERT INTO usuario (nome, email, senha) VALUES (:nome, :email, :senha)";
-    $stmt = $pdo->prepare($sql);
-    $ok = $stmt->execute([
-        ':nome'  => $nome,
-        ':email' => $email,
-        ':senha' => $hash
-    ]);
-
-    if ($ok) {
-        echo "<script>alert('Usuário cadastrado com sucesso!'); window.location.href='index.php';</script>";
-    } else {
-        echo "<script>alert('Erro ao cadastrar usuário.'); history.back();</script>";
-    }
+    echo "<script>alert('Usuário cadastrado com sucesso!'); window.location.href='index.php';</script>";
 }
 ?>
 <!DOCTYPE html>
