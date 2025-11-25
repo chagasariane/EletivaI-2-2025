@@ -1,15 +1,43 @@
 <?php
-// cadastro.php
+require __DIR__ . '/conexao.php';
+
+$mensagem = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nome = $_POST["nome"];
-    $email = $_POST["email"];
-    $senha = $_POST["senha"];
+    $nome  = trim($_POST["nome"] ?? '');
+    $email = trim($_POST["email"] ?? '');
+    $senha = $_POST["senha"] ?? '';
 
-    // Aqui você pode adicionar a lógica para salvar no banco de dados.
-    // Exemplo: inserção via PDO (não incluído para simplificar).
+    if ($nome === '' || $email === '' || $senha === '') {
+        $mensagem = "Preencha todos os campos.";
+    } else {
+        $hash = password_hash($senha, PASSWORD_DEFAULT);
 
-    echo "<script>alert('Usuário cadastrado com sucesso!'); window.location.href='index.php';</script>";
+        $sql = "INSERT INTO usuario (usu_nome, usu_email, usu_senha) 
+                VALUES (:nome, :email, :senha)";
+
+        try {
+            $stmt = $pdo->prepare($sql);
+            $ok = $stmt->execute([
+                ':nome'  => $nome,
+                ':email' => $email,
+                ':senha' => $hash
+            ]);
+
+            if ($ok) {
+                echo "<script>alert('Usuário cadastrado com sucesso!'); window.location.href='index.php';</script>";
+                exit;
+            } else {
+                $mensagem = "Erro ao cadastrar usuário.";
+            }
+        } catch (PDOException $e) {
+            if ($e->getCode() === '23000') {
+                $mensagem = "Já existe um usuário cadastrado com esse e-mail.";
+            } else {
+                $mensagem = "Erro ao cadastrar usuário.";
+            }
+        }
+    }
 }
 ?>
 <!DOCTYPE html>
@@ -42,6 +70,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <div class="container d-flex justify-content-center align-items-center vh-100">
         <div class="card p-4" style="width: 100%; max-width: 450px;">
             <h3 class="text-center mb-4">🐾 Cadastro de Usuário</h3>
+
+            <?php if ($mensagem): ?>
+                <div class="alert alert-danger py-2"><?= htmlspecialchars($mensagem) ?></div>
+            <?php endif; ?>
+
             <form method="POST" action="">
                 <div class="mb-3">
                     <label for="nome" class="form-label">Nome completo</label>
