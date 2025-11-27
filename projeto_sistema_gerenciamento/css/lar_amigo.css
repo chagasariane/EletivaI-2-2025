@@ -1,0 +1,103 @@
+/* ================== ESTILO GERAL ================== */
+
+body {
+    background: #fffaf0;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+.container {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+/* ================== NAVBAR TOPO ================== */
+
+.navbar-lar-amigo {
+    background: #ff9f43;
+}
+
+.navbar-lar-amigo .navbar-brand,
+.navbar-lar-amigo .nav-link,
+.navbar-lar-amigo .navbar-text {
+    color: #ffffff !important;
+    font-weight: 500;
+}
+
+.navbar-lar-amigo .nav-link.active,
+.navbar-lar-amigo .nav-link:hover {
+    text-decoration: underline;
+}
+
+/* ================== TELAS DE LOGIN / CADASTRO ================== */
+
+.auth-page {
+    background: linear-gradient(135deg, #ffeccc, #fffaf0);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.auth-card {
+    border-radius: 20px;
+    padding: 30px;
+    width: 370px;
+    border: none;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    background: #ffffff;
+}
+
+.paw {
+    font-size: 60px;
+    color: #ff9f43;
+}
+
+/* ================== BOTÕES PADRÃO ================== */
+
+.btn-lar-amigo {
+    background: #ff9f43;
+    border-color: #ff9f43;
+    color: #ffffff;
+}
+
+.btn-lar-amigo:hover,
+.btn-lar-amigo:focus {
+    background: #e68b33;
+    border-color: #e68b33;
+    color: #ffffff;
+}
+
+/* ================== DASHBOARD / PRINCIPAL ================== */
+
+.card-dashboard {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.chart-container {
+    height: 220px;
+}
+
+/* ================== TABELAS ================== */
+
+.table thead {
+    background-color: rgba(255, 159, 67, 0.2);
+}
+
+/* ================== IMPRESSÃO ================== */
+
+@media print {
+    .no-print {
+        display: none !important;
+    }
+
+    body {
+        background: #ffffff;
+    }
+
+    .card {
+        box-shadow: none !important;
+        border: 1px solid #ccc !important;
+    }
+}

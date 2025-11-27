@@ -35,13 +35,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <title>Criar Conta - Lar Amigo</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-<link href="css/lar_amigo.css" rel="stylesheet">
 
+<style>
+body {
+    background: linear-gradient(135deg, #ffeccc, #fffaf0);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+.card {
+    border-radius: 20px;
+    padding: 30px;
+    width: 370px;
+    border: none;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.paw {
+    font-size: 60px;
+    color: #ff9f43;
+}
+</style>
 </head>
 
-<body class="auth-page">
+<body>
 
-<div class="card auth-card">
+<div class="card">
     <div class="text-center mb-3">
         <div class="paw">🐾</div>
         <h3 class="fw-bold">Criar Conta</h3>
@@ -72,7 +94,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="password" name="senha" class="form-control" required>
         </div>
 
-        <button class="btn w-100 btn-lar-amigo">Cadastrar</button>
+        <button class="btn w-100 text-white" style="background:#ff9f43;">Cadastrar</button>
     </form>
 
     <div class="text-center mt-3">

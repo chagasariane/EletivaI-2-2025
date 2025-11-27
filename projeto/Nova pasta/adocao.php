@@ -65,7 +65,7 @@ $adotantes = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
-    $ani_id = (int) $_POST["ani_id"];
+    $ani_id  = (int) $_POST["ani_id"];
     $adot_id = (int) $_POST["adot_id"];
     $data = $_POST["data_adocao"];
 

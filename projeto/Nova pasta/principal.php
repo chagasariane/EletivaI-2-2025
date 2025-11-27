@@ -69,10 +69,10 @@ foreach ($dados as $d) {
 ?>
 
 <?php if (!empty($dados)): ?>
-<div class="card mt-4 shadow-sm card-dashboard">
+<div class="card mt-4 shadow-sm" style="max-width: 600px; margin: 0 auto;">
     <div class="card-body">
         <h5 class="card-title mb-3">Adoções por espécie</h5>
-        <div class="chart-container">
+        <div style="height: 220px;">
             <canvas id="graficoAdoes"></canvas>
         </div>
     </div>

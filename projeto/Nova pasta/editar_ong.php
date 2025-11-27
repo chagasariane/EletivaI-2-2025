@@ -14,7 +14,7 @@ if (!$ong) {
     exit;
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
     $nome = trim($_POST["nome"]);
     $cnpj = trim($_POST["cnpj"]);
